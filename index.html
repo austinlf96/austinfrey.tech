@@ -4,34 +4,51 @@
         <meta charset="utf-8">
         <title>Austin Frey: Full-stack Web Developer</title>
         <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="/fontawesome-pro-5.15.4-web/css/all.min.css" type="text/html">
+        <link rel="stylesheet" href="/fontawesome-pro-6.0.0-beta3-web/css/all.min.css" type="text/css">
         <link rel="icon" href="data:;base64,iVBORw0KGgo=">
     </head>
     <body>
-        <header id="title">
-            <h1>Austin Frey: Full-stack Web Developer</h1>
+        <header class="sidebar">
+            <div class="flex-container" style="height: min-content;"><img class="logo" src="images/logo3.jpg"></div>
+            <nav  class="flex-container navbar">
+                <a class="nav-btn" href="#home">Home</a>
+                <a class="nav-btn" href="#about">About</a>
+                <a class="nav-btn" href="#portfolio">Portfolio</a>
+                <a class="nav-btn" href="#resume">Resume</a>
+                <a class="nav-btn" href="#contact">Contact</a>
+            </nav>
+            
+            <nav class="flex-container social-bar">
+                <a class="social-btn" href="#linkedin"><i class="fab fa-linkedin-in fa-1x"></i></a>
+                <a class="social-btn" href="#github"><i class="fab fa-github fa-1x"></i></a>
+                <a class="social-btn" href="#facebook"><i class="fab fa-facebook-f fa-1x"></i></a>
+                <a class="social-btn" href="#twitter"><i class="fab fa-twitter fa-1x"></i></a>
+            </nav>
         </header>
-        <nav id="section-nav">
-            <ul id="top-nav">
-                <li id="home" class="nav-item"><a href="#home">Home</a></li>
-                <li id="about" class="nav-item"><a href="#about">About Us</a></li>
-                <li id="portfolio" class="nav-item"><a href="#portfolio">Portfolio</a></li>
-                <li id="resume" class="nav-item"><a href="#resume">Resume</a></li>
-                <li id="contact" class="nav-item"><a href="#contact">Contact Us</a></li>
-            </ul>
-        </nav>
 
-        <main id="home">
+
+        <main class="tinted-image">
+            <div class="flex-container" id="header-images">
+                <img class="circular-img fade-in" src="images/Final Business Headshotjpg.jpg" alt="Austin Frey, web developer">
+                <section class="flex-container flex-column-wrap" style="justify-content: center; width: 40%;">
+                    <em><h1 class="chat-bubble-left isolate">Hi! I'm Austin, a full-stack web developer...</h1></em>
+                    <em><h1 class="chat-bubble-right isolate">and I'm Julian, a much better debugger than a rubber duck!</h1></em>
+                </section>
+                <img class="circular-img fade-in" src="images/Julian.jpg" alt="Julian, bearded dragon">
+            </div>
+            <article id="home">
+
+            </article> 
             <article id="about">
                 <header id="about-header" class="subheader"><h2>About Austin & Julian</h2></header>
                 <p>
-                    Hello! My name is Austin Frey. I'm a formally and self-educated full-stack web developer. 
-                    I design and developer the front-end and the back-end of websites. Occasionally, my bearded dragon, 
-                    Julian, helps out. He gets screen fatigue pretty easily though, so I do most of the heavy lifting. 
+                    Hello! We came here to kick ass and chew bubblegum, and Julian can't chew bubblegum cause he'll choke and die and that's just not fucking cool bro.
                 </p>
             </article>
+           <!--
             <section id="portfolio" >
                 <header id="portfolio-header" class="subheader"><h2>Projects</h2></header>
+                <article class="project-card"></article>
             </section>
             <article id="resume">
                 <header id="resume-header" class="subheader"><h2>Resume</h2></header>
@@ -39,12 +56,10 @@
             <article id="contact">
                 <header id="contact-header" class="subheader"><h2>Contact Us</h2></header>
             </article>
+            -->
         </main>
     </body>
     <footer>
-        <nav id="socials">
-
-        </nav>
-        <h4>Copyright AustinFrey.tech 2021. All rights reserved.</h4>
+        <i class="fa-light fa-copyright"></i><p>Copyright AustinFrey.tech 2021. All rights reserved.</p>
     </footer>
 </html>

@@ -1,0 +1,229 @@
+/* || GENERAL STYLES */
+
+:root{
+    --background: #F0F0F2;
+    --logo_banner: #152737;
+    --logo_font: #fffff0;
+    --logo_background: #682321;
+
+    /*Colorful Theme*/
+    --colorful_purple: ##BE7ABF;
+    --colorful_lavender: #F2DCF2;
+    --colorful_blue: #609BBF;
+    --colorful_tan: #F28F79;
+
+    /*Bright Theme*/
+    --bright_lavender: #D7C7D9;
+    --bright_peach: #F28F79;
+    --bright_tan: #F2D7D0;
+    --bright_gray: #595959;
+
+    /*Deep Theme*/
+    --deep_tan: #F2D7D0;
+    --deep_blue: #609BBF;
+    --deep_lavender: #D7C7D9;
+    --deep_black: #595959;
+
+    /*Dark Theme*/
+    --dark_purple: #8C6C8C;
+    --dark_lavender: #F2DCF2;
+    --dark_plum: ##736673;
+    --dark_black: #736662;
+
+
+    /*Illustration Theme*/
+    --ill_pink: #F26B76;
+    --ill_darkblue: #010440 ;
+    --ill_navyblue: #010326;
+    --ill_mint: #5ABFA3;
+    --ill_salmon: #F2AEAE;
+    
+}
+
+body{
+    background-image: 
+        linear-gradient( 
+            rgba(40, 40, 40, 0.35),
+            rgba(40, 40, 40, 0.35)),
+
+        url("images/Technicolor\ City.jpeg");
+    background-attachment:fixed;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    color: var(--logo_font);
+}
+
+footer{
+    color: var(--logo_font);
+    position: relative;
+    text-align: center;
+    top: 100vh;
+    overflow: hidden;
+}
+
+main{
+    position: absolute;
+    left: 10%;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    justify-content: space-evenly;
+}
+
+/* || UTILTY STYLES*/
+
+
+.chat-bubble-left{
+    transform: translatey(0px);
+    animation: float 5s ease-in-out infinite;
+    mix-blend-mode: hard-light;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: .5rem;
+    line-height: 1.75rem;
+    font-size: 1rem;
+    color: var(--logo_font);
+    background-color: var(--logo_banner);
+    padding: 2%;
+    border-radius: .5rem;
+    position: relative;
+    box-shadow: .5rem .5rem var(--logo_background);
+    border: .15rem solid var(--logo_font);
+}
+
+@keyframes float {
+    0% {  
+        transform: translatex(0rem);
+    }
+    50% {
+        transform: translatex(-1.5rem);
+    }
+    100% {
+        transform: translatex(0rem);
+    }
+}
+
+.chat-bubble-right{
+    transform: translatey(0px);
+    animation: float2 5s ease-in-out infinite;
+    mix-blend-mode: hard-light;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: .5rem;
+    line-height: 1.75rem;
+    font-size: 1rem;
+    color: var(--logo_font);
+    background-color: var(--logo_banner);
+    padding: 2%;
+    border-radius: .5rem;
+    position: relative;
+    box-shadow: .5rem .5rem var(--logo_background);
+    border: .15rem solid var(--logo_font);
+}
+
+    @keyframes float2 {
+        0% {
+        transform: translatex(0rem);
+        }
+        50% {
+        transform: translatex(1.5rem);
+        }
+        100% {
+        transform: translatex(0rem);
+        }
+}
+
+.circular-img{
+    margin: 2%;
+    border-radius: 50%;
+    border: .2rem solid var(--logo_font);
+    max-width: 20%;
+    height: auto;
+}
+
+.flex-container{
+    display: flex;
+    flex-basis: 100%;
+}
+
+.flex-column-wrap{
+    flex-flow: column wrap;
+}
+
+#header-images{
+    width: 100%;
+    height: auto;
+    justify-content: space-around;
+}
+
+/* ||SITEWIDE */
+.logo{
+    max-width: 100%;
+    max-height: 50%;
+}
+
+.navbar{
+    display: flex;
+    flex-basis: 100%;
+    flex-flow: row wrap;
+    margin-bottom: 35%;
+    border-top: 1px solid var(--ill_darkblue);
+}
+
+.nav-btn{
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--logo_font);
+    border-bottom: 1px solid var(--ill_darkblue);
+    flex-basis: 100%;
+}
+
+.nav-btn:hover{
+    color: var(--ill_pink);
+    background-color: rgba(255, 255, 240, .05);
+    border-radius: .5rem;
+}
+
+.social-bar{
+    display: flex;
+    flex-basis: 100%;
+    flex-flow: row wrap;
+    margin-bottom: 35%;
+}
+
+.social-btn{
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--logo_font);
+    flex-basis: 100%;
+}
+
+.social-btn:hover{
+    color: var(--ill_pink);
+}
+
+.sidebar{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: stretch;
+    background-color: var(--logo_banner);
+    width: 8vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: auto;
+}
