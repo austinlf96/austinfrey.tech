@@ -59,8 +59,7 @@ footer{
     color: var(--logo_font);
     position: relative;
     text-align: center;
-    top: 100vh;
-    overflow: hidden;
+    
 }
 
 main{
@@ -78,10 +77,11 @@ ul{
 #about{
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 5% 0;
+    gap: 0 5%;
 }
 
 .about-column{
+    background-color: rgba(2, 3, 29, 0.562);
 
 }
 
@@ -163,6 +163,17 @@ ul{
     height: auto;
 }
 
+.codepen{
+    height: 300px; 
+    box-sizing: border-box; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    border: 2px solid; 
+    margin: 1em 0; 
+    padding: 1em;
+}
+
 .flex-container{
     display: flex;
     flex-basis: 100%;
@@ -172,12 +183,25 @@ ul{
     flex-flow: column wrap;
 }
 
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5% 5%;
+}
+
 #header-images{
     width: 100%;
     height: auto;
     justify-content: space-around;
 }
 
+.project-card{
+    background-color: var(--ill_navyblue);
+    border-radius: 1rem;
+    margin: 2%;
+    padding: 2%;
+    text-align: center;
+}
 
 /* ||SITEWIDE */
 
