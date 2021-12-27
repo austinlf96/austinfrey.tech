@@ -75,7 +75,23 @@ ul{
 }
 
 /* || UTILTY STYLES*/
+#about{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 5% 0;
+}
 
+.about-column{
+
+}
+
+#about-austin{
+
+}
+
+#about-julian{
+
+}
 
 .chat-bubble-left{
     transform: translatey(0px);
@@ -85,8 +101,8 @@ ul{
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: .5rem;
-    line-height: 1.75rem;
-    font-size: 1rem;
+    line-height: 2rem;
+    font-size: 1.5rem;
     color: var(--logo_font);
     background-color: var(--logo_banner);
     padding: 2%;
@@ -116,8 +132,8 @@ ul{
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: .5rem;
-    line-height: 1.75rem;
-    font-size: 1rem;
+    line-height: 2rem;
+    font-size: 1.5rem;
     color: var(--logo_font);
     background-color: var(--logo_banner);
     padding: 2%;
@@ -127,16 +143,16 @@ ul{
     border: .15rem solid var(--logo_font);
 }
 
-    @keyframes float2 {
-        0% {
-        transform: translatex(0rem);
-        }
-        50% {
-        transform: translatex(1.5rem);
-        }
-        100% {
-        transform: translatex(0rem);
-        }
+@keyframes float2 {
+    0% {
+    transform: translatex(0rem);
+    }
+    50% {
+    transform: translatex(1.5rem);
+    }
+    100% {
+    transform: translatex(0rem);
+    }
 }
 
 .circular-img{
@@ -162,7 +178,9 @@ ul{
     justify-content: space-around;
 }
 
+
 /* ||SITEWIDE */
+
 .logo{
     max-width: 100%;
     max-height: 50%;
@@ -197,6 +215,7 @@ ul{
     display: flex;
     flex-basis: 100%;
     flex-flow: row wrap;
+    justify-content: space-around;
     margin-bottom: 35%;
 }
 
