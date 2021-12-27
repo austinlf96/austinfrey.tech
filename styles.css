@@ -196,10 +196,14 @@ ul{
 }
 
 .project-card{
-    background-color: var(--ill_navyblue);
-    border-radius: 1rem;
-    margin: 2%;
+    color: var(--logo_font);
+    background-color: var(--logo_banner);
+    margin-right: 2%;
     padding: 2%;
+    border-radius: .5rem;
+    position: relative;
+    box-shadow: .25rem .25rem .3rem var(--logo_background);
+    border: .15rem solid var(--logo_font);
     text-align: center;
 }
 
