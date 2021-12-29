@@ -1,11 +1,12 @@
 /* || GENERAL STYLES */
 
 :root{
-    --background: #F0F0F2;
     --logo_banner: #152737;
     --logo_font: #fffff0;
     --logo_background: #682321;
-
+    --accent_one: #A6432D;
+    --accent_two: #F57532;
+    --accent_three: #5ABFA3;
     /*Colorful Theme*/
     --colorful_purple: ##BE7ABF;
     --colorful_lavender: #F2DCF2;
@@ -42,13 +43,12 @@
 
 body{
     background-image: 
-        linear-gradient( 
+        /*linear-gradient( 
             rgba(40, 40, 40, 0.35),
             rgba(40, 40, 40, 0.35)),
-
-        url("images/Technicolor\ City.jpeg");
+*/
+        url("images/smaller\ paper\ background.jpeg");
     background-attachment:fixed;
-    background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
@@ -60,6 +60,15 @@ footer{
     position: relative;
     text-align: center;
     
+}
+
+hr{
+    color: var(--accent_two);
+}
+
+h2{
+    color: var(--logo_font);
+    letter-spacing: 1rem;
 }
 
 main{
@@ -85,54 +94,78 @@ ul{
 
 }
 
-#about-austin{
-
-}
-
-#about-julian{
-
-}
-
 .chat-bubble-left{
     transform: translatey(0px);
     animation: float 5s ease-in-out infinite;
-    mix-blend-mode: hard-light;
-    text-align: center;
+    mix-blend-mode: normal;
+    justify-content: center;
+    align-items: center;
     text-transform: uppercase;
     font-weight: bold;
-    letter-spacing: .5rem;
-    line-height: 2rem;
+    font-style: italic;
+    max-width: 70%;
+    letter-spacing: .75rem;
+    line-height: 2.5rem;
     font-size: 1.5rem;
+    padding: 2%;
     color: var(--logo_font);
     background-color: var(--logo_banner);
-    padding: 2%;
     border-radius: .5rem;
     position: relative;
     box-shadow: .5rem .5rem var(--logo_background);
-    border: .15rem solid var(--logo_font);
+    border: .25rem solid var(--logo_font);
+}
+
+.chat-bubble-left:before{
+    content: "";
+    width: 0%;
+    height: 0%;
+    position: absolute;
+    border-top: 2rem solid var(--logo_font);
+    border-right: 0rem solid var(--logo_font);
+    border-bottom: 0rem solid transparent;
+    border-left: 2rem solid transparent;
+    left: -2rem;
+    top: 0.75rem;
+}
+
+.chat-bubble-left:after{
+    content: "";
+    width: 0%;
+    height: 0%;
+    position: absolute;
+    border-top: 1.75rem solid var(--logo_banner);
+    border-right: 0rem solid var(--logo_banner);
+    border-bottom: 0rem solid transparent;
+    border-left: 1.5rem solid transparent;
+    left: -1.45rem;
+    top: 0.92rem;
 }
 
 @keyframes float {
-    0% {  
+    0% {
         transform: translatex(0rem);
-    }
-    50% {
-        transform: translatex(-1.5rem);
-    }
-    100% {
+        }
+        50% {
+        transform: translatex(2rem);
+        }
+        100% {
         transform: translatex(0rem);
-    }
+        }
 }
 
 .chat-bubble-right{
     transform: translatey(0px);
     animation: float2 5s ease-in-out infinite;
-    mix-blend-mode: hard-light;
-    text-align: center;
+    mix-blend-mode: normal;
+    justify-content: center;
+    align-items: center;
+    max-width: 70%;
     text-transform: uppercase;
     font-weight: bold;
-    letter-spacing: .5rem;
-    line-height: 2rem;
+    font-style: italic;
+    letter-spacing: .75rem;
+    line-height: 2.5rem;
     font-size: 1.5rem;
     color: var(--logo_font);
     background-color: var(--logo_banner);
@@ -140,18 +173,44 @@ ul{
     border-radius: .5rem;
     position: relative;
     box-shadow: .5rem .5rem var(--logo_background);
-    border: .15rem solid var(--logo_font);
+    border: .25rem solid var(--logo_font);
+}
+
+.chat-bubble-right:before{
+    content: "";
+    width: 0%;
+    height: 0%;
+    position: absolute;
+    border-top: 2rem solid var(--logo_font);
+    border-left: 0rem solid var(--logo_font);
+    border-bottom: 0rem solid transparent;
+    border-right: 2rem solid transparent;
+    right: -2rem;
+    top: 0.75rem;
+}
+
+.chat-bubble-right:after{
+    content: "";
+    width: 0%;
+    height: 0%;
+    position: absolute;
+    border-top: 1.75rem solid var(--logo_banner);
+    border-left: 0rem solid var(--logo_banner);
+    border-bottom: 0rem solid transparent;
+    border-right: 1.5rem solid transparent;
+    right: -1.45rem;
+    top: 0.92rem;
 }
 
 @keyframes float2 {
     0% {
-    transform: translatex(0rem);
+    transform: translatex(1rem);
     }
     50% {
-    transform: translatex(1.5rem);
+    transform: translatex(-1rem);
     }
     100% {
-    transform: translatex(0rem);
+    transform: translatex(1rem);
     }
 }
 
@@ -159,19 +218,9 @@ ul{
     margin: 2%;
     border-radius: 50%;
     border: .2rem solid var(--logo_font);
-    max-width: 20%;
+    box-shadow: .25rem .25rem .25rem var(--logo_background);
+    max-width: 7vw;
     height: auto;
-}
-
-.codepen{
-    height: 300px; 
-    box-sizing: border-box; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    border: 2px solid; 
-    margin: 1em 0; 
-    padding: 1em;
 }
 
 .flex-container{
@@ -183,35 +232,75 @@ ul{
     flex-flow: column wrap;
 }
 
-.grid-container{
+.flex-row-wrap{
+    flex-flow: row wrap;
+}
+
+.grid-left-big{
+    grid-area: big-left;
+    box-sizing: border-box;
+}
+
+.grid-right-small{
+    grid-area: small-right;
+    box-sizing: border-box;
+}
+
+.grid-right-big{
+    grid-area: big-right;
+    box-sizing: border-box;
+    text-align: end;
+}
+
+.grid-left-small{
+    grid-area: small-left;
+    box-sizing: border-box;
+}
+
+.project-card-left{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 5% 5%;
-}
-
-#header-images{
-    width: 100%;
-    height: auto;
-    justify-content: space-around;
-}
-
-.project-card{
+    grid-template-areas: 
+    'big-left big-left big-left big-left small-right small-right'
+    'big-left big-left big-left big-left small-right small-right';
+    gap: 1rem;
     color: var(--logo_font);
-    background-color: var(--logo_banner);
-    margin-right: 2%;
-    padding: 2%;
-    border-radius: .5rem;
+    margin: 2%;
+    padding-left: 1%;
+    border-left: .25rem solid var(--accent_three);
     position: relative;
-    box-shadow: .25rem .25rem .3rem var(--logo_background);
-    border: .15rem solid var(--logo_font);
-    text-align: center;
+    justify-content: space-between;
+    
 }
 
+.project-card-right{
+    display: grid;
+    grid-template-areas: 
+    'small-left small-left big-right big-right big-right big-right'
+    'small-left small-left big-right big-right big-right big-right';
+    gap: 1rem;
+    color: var(--logo_font);
+    border-right: .25rem solid var(--accent_two);
+    margin: 2%;
+    padding-right: 1%;
+    justify-content: space-between;
+}
+
+.project-img{
+    width: 60%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+#resume{
+    
+}
 /* ||SITEWIDE */
 
 .logo{
     max-width: 100%;
     max-height: 50%;
+    opacity: .9;
+    border: 1% ridge var(--logo_background);
 }
 
 .navbar{
@@ -219,7 +308,7 @@ ul{
     flex-basis: 100%;
     flex-flow: row wrap;
     margin-bottom: 35%;
-    border-top: 1px solid var(--ill_darkblue);
+    border-top: 1px solid var(--logo_background);
 }
 
 .nav-btn{
@@ -228,15 +317,23 @@ ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--logo_font);
-    border-bottom: 1px solid var(--ill_darkblue);
+    color: var(--accent_one);
+    border-bottom: 1px solid var(--logo_background);
     flex-basis: 100%;
 }
 
 .nav-btn:hover{
-    color: var(--ill_pink);
-    background-color: rgba(255, 255, 240, .05);
-    border-radius: .5rem;
+    color: var(--logo_banner);
+    animation: hover-animation 500ms ease-in 0s forwards 1;
+}
+
+@keyframes hover-animation{
+    0%{
+        font-size: 1rem;
+    }
+    100%{
+        font-size: 1.3rem;
+    }
 }
 
 .social-bar{
@@ -253,12 +350,14 @@ ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--logo_font);
+    color: var(--accent_one);
     flex-basis: 100%;
 }
 
 .social-btn:hover{
-    color: var(--ill_pink);
+    color: var(--logo_banner);
+    animation: hover-animation 500ms ease-in 0s forwards 1;
+      
 }
 
 .sidebar{
@@ -266,7 +365,6 @@ ul{
     flex-flow: row wrap;
     justify-content: space-between;
     align-content: stretch;
-    background-color: var(--logo_banner);
     width: 8vw;
     position: fixed;
     top: 0;
