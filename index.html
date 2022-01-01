@@ -7,12 +7,14 @@
         <link rel="stylesheet" href="/fontawesome-pro-6.0.0-beta3-web/css/all.min.css" type="text/css">
         <link rel="icon" href="data:;base64,iVBORw0KGgo=">
     </head>
-    <body>
+    <body id="home">
         <header class="sidebar">
-            <div class="flex-container flex-column-wrap" style="height: min-content; justify-content: space-between;">
+            <div id="logo-container">
                 <img class="logo" src="images/logo3.jpg">
             </div>
-            <nav  class="flex-container navbar">
+            <input type="checkbox" id="toggle"/>
+            <label for="toggle" class="hamburger">&#9776;</label>
+            <nav  class="navbar">
                 <a class="nav-btn" href="#home">Home</a>
                 <!--<a class="nav-btn" href="#about">About</a>-->
                 <a class="nav-btn" href="#portfolio">Portfolio</a>
@@ -20,14 +22,14 @@
                 <a class="nav-btn" href="#contact">Contact</a>
             </nav>
             
-            <nav class="flex-container social-bar">
+            <nav class="social-bar">
                 <a class="social-btn" target="_blank" href="https://www.linkedin.com/in/austin-frey/"><i class="fa-brands fa-linkedin-in fa-xl"></i></a>
                 <a class="social-btn" target="_blank" href="https://github.com/austinlf96"><i class="fa-brands fa-github fa-xl"></i></a>
                 <a class="social-btn" target="_blank" href="https://www.facebook.com/austinlf96/"><i class="fa-brands fa-facebook-f fa-xl"></i></a>
                 <a class="social-btn" target="_blank" href="https://www.freecodecamp.org/austinlf96"><i class="fa-brands fa-free-code-camp fa-xl"></i></a>
             </nav>
         </header>
-        <main class="tinted-image" id="home">
+        <main class="tinted-image">
             <div class="flex-container flex-column-wrap" id="header-images" style="margin-bottom: 5%;">
                 <section class="flex-container" style="justify-content: flex-start;">
                     <img class="circular-img fade-in" src="images/Final Business Headshotjpg.jpg" alt="Austin Frey, web developer">

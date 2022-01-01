@@ -66,7 +66,6 @@ hr{
     color: var(--accent_two);
 }
 
-
 main{
     position: absolute;
     left: 10%;
@@ -266,7 +265,10 @@ ul{
 
 
 /* ||SITEWIDE */
-
+#logo-container{
+    height: min-content;
+    justify-content: space-between;
+}
 .logo{
     max-width: 100%;
     max-height: 50%;
@@ -346,4 +348,59 @@ ul{
     color: var(--logo_font);
     letter-spacing: 1rem;
     margin-left: 2%;
+}
+
+#toggle{
+    display: none;
+}
+
+.hamburger{
+    display: none;
+}
+@media only screen and (max-width: 1200px) {
+    body{
+        background-image: url("images/mobile\ background.jpeg");
+    }
+    
+    main{
+        left: 0%;
+        top: 5%;
+    }
+
+    .logo{
+        max-height: 100%;
+        padding: 0%;
+        margin: 0%;
+    }
+    #logo-container{
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+    .nav-btn{
+        color: var(--logo_font);
+    }
+    .navbar{
+        flex-flow: column wrap;
+        align-items: space-between;
+        margin-bottom: 0%;
+    }
+    .sidebar{
+        background-color: var(--logo_background);
+        flex-flow: row nowrap;
+        align-content: space-between;
+        width: auto;
+        height: 5%;
+        right: 0;
+        z-index: 1;
+    }
+
+    .social-bar{
+        flex-flow: column wrap;
+        margin-bottom: 0%;
+    }
+
+    .social-btn{
+        color: var(--logo_font);
+    }
 }
