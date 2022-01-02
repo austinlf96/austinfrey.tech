@@ -7,6 +7,7 @@
     --accent_one: #A6432D;
     --accent_two: #F57532;
     --accent_three: #5ABFA3;
+
     /*Colorful Theme*/
     --colorful_purple: ##BE7ABF;
     --colorful_lavender: #F2DCF2;
@@ -66,7 +67,8 @@ footer{
 }
 
 h3{
-    font-size: 3rem;
+    font-size: 2rem;
+    color: var(--logo_font);
 }
 
 hr{
@@ -100,6 +102,37 @@ ul{
 
 }
 
+.card-left{
+    grid-template-columns: 2fr 1fr;
+    padding-left: 1%;
+    border-left: .25rem solid var(--accent_three);
+
+}
+
+.card-right{
+    grid-template-columns: 1fr 2fr;
+    border-right: .25rem solid var(--accent_two);
+    padding-right: 1%;
+}
+
+.certification{
+    width: 15%;
+    margin: 1%;
+}
+
+.certification img{
+    width: 100%;
+}
+
+.certifications-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    margin: 2%;
+}
+
 .chat-bubble-left{
     transform: translatey(0px);
     animation: float 5s ease-in-out infinite;
@@ -110,9 +143,9 @@ ul{
     font-weight: bold;
     font-style: italic;
     max-width: 70%;
-    letter-spacing: .75rem;
+    letter-spacing: .5rem;
     line-height: 2.5rem;
-    font-size: 1.5rem;
+    font-size: 1.5vw;
     padding: 2%;
     color: var(--logo_font);
     background-color: var(--logo_banner);
@@ -158,9 +191,9 @@ ul{
     text-transform: uppercase;
     font-weight: bold;
     font-style: italic;
-    letter-spacing: .75rem;
+    letter-spacing: .5rem;
     line-height: 2.5rem;
-    font-size: 1.5rem;
+    font-size: 1.5vw;
     color: var(--logo_font);
     background-color: var(--logo_banner);
     padding: 2%;
@@ -201,14 +234,17 @@ ul{
     border-radius: 50%;
     border: .2rem solid var(--logo_font);
     box-shadow: .25rem .25rem .25rem var(--logo_background);
-    width: 14vh;
-    height: 14vh;
+    align-content: flex-start;
+    align-items: flex-start;
     aspect-ratio: 1/1;
+}
+
+.content-section{
+    margin-left: 2%;
 }
 
 .flex-container{
     display: flex;
-    flex-basis: 100%;
 }
 
 .flex-column-wrap{
@@ -251,18 +287,6 @@ ul{
     justify-content: space-between;
     align-items: center;
 }
-.card-left{
-    grid-template-columns: 2fr 1fr;
-    padding-left: 1%;
-    border-left: .25rem solid var(--accent_three);
-
-}
-
-.card-right{
-    grid-template-columns: 1fr 2fr;
-    border-right: .25rem solid var(--accent_two);
-    padding-right: 1%;
-}
 
 .project-img{
     width: 100%;
@@ -270,6 +294,11 @@ ul{
     border-radius: 1rem;
 }
 
+#resume-img{
+    width: 75%;
+    height: auto;
+    margin: 3%;
+}
 
 /* ||SITEWIDE */
 
@@ -349,7 +378,7 @@ ul{
 .subheader{
     color: var(--logo_font);
     letter-spacing: 1rem;
-    margin-left: 2%;
+    margin-left: -.5%;
 }
 
 #toggle{
@@ -362,7 +391,7 @@ ul{
     user-select: none;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1270px) {
     body{
         background-image: url("images/mobile\ background.jpeg");
     }
@@ -371,30 +400,45 @@ ul{
         left: 0%;
         top: 8%;
     }
-
+    /*
     .hamburger{
         display: block;
     }
-
+    */
     .logo{
         width:auto;
         max-height: 100%;
         padding: 0%;
         margin: 0%;
     }
+
     #logo-container{
         display: block;
         height: 100%;
         width: 100%;
     }
+
     .nav-btn{
         color: var(--logo_font);
     }
+
     .navbar{
         flex-flow: row nowrap;
         align-items: space-between;
         margin-bottom: 0%;
     }
+
+    #certifications-container{
+        flex-flow: column wrap;
+    }
+
+    .certification{
+        width: 40%;
+    }
+    #resume-img{
+        width: auto;
+    }
+
     .sidebar{
         background-color: var(--logo_background);
         flex-flow: row nowrap;
@@ -419,9 +463,11 @@ ul{
     .social-btn{
         color: var(--logo_font);
     }
+
     /*Working on hamburger menu functionality. Currently have the checkbox hidden
-    but still need to mess with the menu and get it to actually disappear/reappear.*/
+    but still need to mess with the menu and get it to actually disappear/reappear.
     #toggle:checked{
         display: block;
     }
+    */
 }
