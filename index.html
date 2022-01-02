@@ -9,11 +9,7 @@
     </head>
     <body id="home">
         <header class="sidebar">
-            <div id="logo-container">
-                <img class="logo" src="images/logo3.jpg">
-            </div>
-            <input type="checkbox" id="toggle"/>
-            <label for="toggle" class="hamburger">&#9776;</label>
+            <video class="logo" type="video/mp4" autoplay muted src="images/logo.mp4"></video>
             <nav  class="navbar">
                 <a class="nav-btn" href="#home">Home</a>
                 <!--<a class="nav-btn" href="#about">About</a>-->
@@ -28,16 +24,18 @@
                 <a class="social-btn" target="_blank" href="https://www.facebook.com/austinlf96/"><i class="fa-brands fa-facebook-f fa-xl"></i></a>
                 <a class="social-btn" target="_blank" href="https://www.freecodecamp.org/austinlf96"><i class="fa-brands fa-free-code-camp fa-xl"></i></a>
             </nav>
+            <input type="checkbox" id="toggle" checked/>
+            <label for="toggle" class="hamburger">&#9776;</label>
         </header>
         <main class="tinted-image">
             <div class="flex-container flex-column-wrap" id="header-images" style="margin-bottom: 5%;">
                 <section class="flex-container" style="justify-content: flex-start;">
-                    <img class="circular-img fade-in" src="images/Final Business Headshotjpg.jpg" alt="Austin Frey, web developer">
+                    <img class="circular-img fade-in" src="images/Headshot 120x108.jpg" alt="Austin Frey, web developer">
                     <h1 class="flex-container chat-bubble-left isolate">Hi! I'm Austin, a full-stack web developer!</h1>
                 </section>
                 <section class="flex-container" style="justify-content: flex-end;">
                     <h1 class="flex-container chat-bubble-right isolate">I'm Julian, a much better debugger than a rubber duck!</h1>
-                    <img class="circular-img fade-in" src="images/Julian.jpg" alt="Julian, bearded dragon">
+                    <img class="circular-img fade-in" src="images/Julian 120x108.jpg" alt="Julian, bearded dragon">
                 </section>
             </div>
             <!--
@@ -54,33 +52,58 @@
             <section id="portfolio" >
                 <header id="portfolio-header" class="subheader"><h2>FRONT-END PROJECTS</h2><hr></header>
                 <section>
-                    <article class="project-card-left">
+                    <article class="project-card card-left">
                         <a class="grid-left-big project-link" href="https://codepen.io/austinlf96/pen/oNgXRjR" target="_blank"><img class="project-img" src="images/Survey Form.png"></a>
-                        <h3 class="grid-right-small">Survey Form</h3>
+                        <section class="flex-container flex-column-wrap grid-right-small">
+                            <h3>Survey Form</h3>
+                            <p>This is a codepen project I created while obtaining my Responsive Web Design certification from 
+                                <a target="_blank" href="www.freecodecamp.org">FreeCodeCamp</a>. 
+                            </p>
+                        </section>
                     </article>
 
-                    <article class="project-card-right">
-                        <h3 class="grid-left-small">My First Portfolio</h3>
+                    <article class="project-card card-right">
+                        <section class="flex-container flex-column-wrap grid-left-small">
+                            <h3 class="grid-left-small">My First Portfolio</h3>
+                            <p>This is a codepen project I created while obtaining my Responsive Web Design certification from 
+                                <a target="_blank" href="www.freecodecamp.org">FreeCodeCamp</a>. </p>
+                        </section>
                         <a class="grid-right-big" href="https://codepen.io/austinlf96/pen/PowJJqv" target="_blank"><img class="project-img" src="images/Personal Portfolio.png"></a>
                     </article>
 
-                    <article class="project-card-left">
+                    <article class="project-card card-left">
                         <a class="grid-left-big project-link" href="https://codepen.io/austinlf96/full/eYNKQar" target="_blank"><img class="project-img" src="images/React Random Quote Machine .png"></a>
-                        <h3 class="grid-right-small">React Quote Generator</h3>
+                        <section class="flex-container flex-column-wrap grid-right-small">
+                            <h3 class="grid-right-small">React Quote Generator</h3>
+                            <p>This is a codepen project I created while obtaining my Responsive Web Design certification from 
+                                <a target="_blank" href="www.freecodecamp.org">FreeCodeCamp</a>. </p>
+                        </section>
                     </article>
 
-                    <article class="project-card-right">
-                        <h3 class="grid-left-small">React Markdown Previewer</h3>
+                    <article class="project-card card-right">
+                        <section class="flex-container flex-column-wrap grid-left-small">
+                            <h3 class="grid-left-small">React Markdown Previewer</h3>
+                            <p>This is a codepen project I created while obtaining my Responsive Web Design certification from 
+                                <a target="_blank" href="www.freecodecamp.org">FreeCodeCamp</a>. </p>
+                        </section>
                         <a class="grid-right-big" href="https://codepen.io/austinlf96/pen/KKpBrjm" target="_blank"><img class="project-img" src="images/React Markdown Previewer.png"></a>
                     </article>
 
-                    <article class="project-card-left">
+                    <article class="project-card card-left">
                         <a class="grid-left-big project-link" href="https://codepen.io/austinlf96/pen/MWwqNxX" target="_blank"><img class="project-img" src="images/React Drum Machine.png"></a>
-                        <h3 class="grid-right-small">React Drum Machine</h3>
+                        <section class="flex-container flex-column-wrap grid-right-small">
+                            <h3 class="grid-right-small">React Drum Machine</h3>
+                            <p>This is a codepen project I created while obtaining my Responsive Web Design certification from 
+                                <a target="_blank" href="www.freecodecamp.org">FreeCodeCamp</a>. </p>
+                        </section>
                     </article>
 
-                    <article class="project-card-right">
-                        <h3 class="grid-left-small">D3 Choropleth Map</h3>
+                    <article class="project-card card-right">
+                        <section class="flex-container flex-column-wrap grid-left-small">
+                            <h3 class="grid-left-small">D3 Choropleth Map</h3>
+                            <p>This is a codepen project I created while obtaining my Responsive Web Design certification from 
+                                <a target="_blank" href="www.freecodecamp.org">FreeCodeCamp</a>. </p>
+                        </section>
                         <a class="grid-right-big" href="https://codepen.io/austinlf96/pen/vYOomze" target="_blank"><img class="project-img" src="images/D3 Choropleth Map.png"></a>
                     </article>
                 </section>

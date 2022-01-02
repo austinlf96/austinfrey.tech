@@ -40,6 +40,9 @@
     --ill_salmon: #F2AEAE;
     
 }
+a{
+    color: var(--accent_two);
+}
 
 body{
     background-image: 
@@ -62,6 +65,10 @@ footer{
     
 }
 
+h3{
+    font-size: 3rem;
+}
+
 hr{
     color: var(--accent_two);
 }
@@ -69,6 +76,10 @@ hr{
 main{
     position: absolute;
     left: 10%;
+}
+
+p{
+    font-size: 1.5rem;
 }
 
 ul{
@@ -190,8 +201,9 @@ ul{
     border-radius: 50%;
     border: .2rem solid var(--logo_font);
     box-shadow: .25rem .25rem .25rem var(--logo_background);
-    max-width: 7vw;
-    height: auto;
+    width: 14vh;
+    height: 14vh;
+    aspect-ratio: 1/1;
 }
 
 .flex-container{
@@ -216,7 +228,7 @@ ul{
     box-sizing: border-box;
     width: 100%;
     text-align: center;
-    font-size: 3rem;
+    align-self: stretch;
 }
 
 .grid-right-big{
@@ -229,32 +241,27 @@ ul{
     box-sizing: border-box;
     width: 100%;
     text-align: center;
-    font-size: 3rem;
 }
 
-.project-card-left{
+.project-card{
     display: grid;
-    grid-template-columns: 2fr 1fr;
     gap: 1rem;
     color: var(--logo_font);
-    margin: 2%;
+    margin: 5% 2% 5% 2%;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-left{
+    grid-template-columns: 2fr 1fr;
     padding-left: 1%;
     border-left: .25rem solid var(--accent_three);
-    position: relative;
-    justify-content: space-between;
-    align-items: center;
+
 }
 
-.project-card-right{
-    display: grid;
+.card-right{
     grid-template-columns: 1fr 2fr;
-    gap: 1rem;
-    color: var(--logo_font);
     border-right: .25rem solid var(--accent_two);
-    margin: 2%;
     padding-right: 1%;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .project-img{
@@ -265,15 +272,12 @@ ul{
 
 
 /* ||SITEWIDE */
-#logo-container{
-    height: min-content;
-    justify-content: space-between;
-}
+
 .logo{
-    max-width: 100%;
-    max-height: 50%;
-    opacity: .9;
-    border: 1% ridge var(--logo_background);
+    align-self: flex-start;
+    justify-self: flex-start;
+    width: 100%;
+    aspect-ratio: 1/1;
 }
 
 .navbar{
@@ -334,8 +338,6 @@ ul{
 .sidebar{
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
-    align-content: stretch;
     width: 8vw;
     position: fixed;
     top: 0;
@@ -356,7 +358,10 @@ ul{
 
 .hamburger{
     display: none;
+    font-size: 1.5rem;
+    user-select: none;
 }
+
 @media only screen and (max-width: 1200px) {
     body{
         background-image: url("images/mobile\ background.jpeg");
@@ -364,10 +369,15 @@ ul{
     
     main{
         left: 0%;
-        top: 5%;
+        top: 8%;
+    }
+
+    .hamburger{
+        display: block;
     }
 
     .logo{
+        width:auto;
         max-height: 100%;
         padding: 0%;
         margin: 0%;
@@ -381,26 +391,37 @@ ul{
         color: var(--logo_font);
     }
     .navbar{
-        flex-flow: column wrap;
+        flex-flow: row nowrap;
         align-items: space-between;
         margin-bottom: 0%;
     }
     .sidebar{
         background-color: var(--logo_background);
         flex-flow: row nowrap;
-        align-content: space-between;
+        align-items: center;
         width: auto;
-        height: 5%;
+        max-height: 8%;
         right: 0;
         z-index: 1;
     }
 
+    /*Hides default checkbox for hamburger menu*/
+    .sidebar input{
+        position: absolute;
+        opacity: 0;
+    }
+
     .social-bar{
-        flex-flow: column wrap;
+        flex-flow: row nowrap;
         margin-bottom: 0%;
     }
 
     .social-btn{
         color: var(--logo_font);
+    }
+    /*Working on hamburger menu functionality. Currently have the checkbox hidden
+    but still need to mess with the menu and get it to actually disappear/reappear.*/
+    #toggle:checked{
+        display: block;
     }
 }
